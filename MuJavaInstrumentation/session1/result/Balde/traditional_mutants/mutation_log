@@ -1,0 +1,243 @@
+AORB_1:44:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] * volume[origem]
+AORB_2:44:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] / volume[origem]
+AORB_3:44:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] % volume[origem]
+AORB_4:44:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] - volume[origem]
+AORB_5:45:void_mover(int,int):maximo[destino] - volume[destino] => maximo[destino] * volume[destino]
+AORB_6:45:void_mover(int,int):maximo[destino] - volume[destino] => maximo[destino] / volume[destino]
+AORB_7:45:void_mover(int,int):maximo[destino] - volume[destino] => maximo[destino] % volume[destino]
+AORB_8:45:void_mover(int,int):maximo[destino] - volume[destino] => maximo[destino] + volume[destino]
+AORB_9:45:void_mover(int,int):volume[origem] - (maximo[destino] - volume[destino]) => volume[origem] * (maximo[destino] - volume[destino])
+AORB_10:45:void_mover(int,int):volume[origem] - (maximo[destino] - volume[destino]) => volume[origem] / (maximo[destino] - volume[destino])
+AORB_11:45:void_mover(int,int):volume[origem] - (maximo[destino] - volume[destino]) => volume[origem] % (maximo[destino] - volume[destino])
+AORB_12:45:void_mover(int,int):volume[origem] - (maximo[destino] - volume[destino]) => volume[origem] + (maximo[destino] - volume[destino])
+AORB_13:48:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] * volume[origem]
+AORB_14:48:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] / volume[origem]
+AORB_15:48:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] % volume[origem]
+AORB_16:48:void_mover(int,int):volume[destino] + volume[origem] => volume[destino] - volume[origem]
+AOIU_1:18:Balde(int,int,int,int,int):maxB1 => -maxB1
+AOIU_2:19:Balde(int,int,int,int,int):maxB2 => -maxB2
+AOIU_3:20:Balde(int,int,int,int,int):maxB3 => -maxB3
+AOIU_4:25:Balde(int,int,int,int,int):volFinalB2 => -volFinalB2
+AOIU_5:26:Balde(int,int,int,int,int):volFinalB3 => -volFinalB3
+AOIU_6:45:void_mover(int,int):origem => -origem
+AOIU_7:46:void_mover(int,int):destino => -destino
+AOIU_8:48:void_mover(int,int):destino => -destino
+AOIS_1:18:Balde(int,int,int,int,int):maxB1 => ++maxB1
+AOIS_2:18:Balde(int,int,int,int,int):maxB1 => --maxB1
+AOIS_3:18:Balde(int,int,int,int,int):maxB1 => maxB1++
+AOIS_4:18:Balde(int,int,int,int,int):maxB1 => maxB1--
+AOIS_5:19:Balde(int,int,int,int,int):maxB2 => ++maxB2
+AOIS_6:19:Balde(int,int,int,int,int):maxB2 => --maxB2
+AOIS_7:19:Balde(int,int,int,int,int):maxB2 => maxB2++
+AOIS_8:19:Balde(int,int,int,int,int):maxB2 => maxB2--
+AOIS_9:20:Balde(int,int,int,int,int):maxB3 => ++maxB3
+AOIS_10:20:Balde(int,int,int,int,int):maxB3 => --maxB3
+AOIS_11:20:Balde(int,int,int,int,int):maxB3 => maxB3++
+AOIS_12:20:Balde(int,int,int,int,int):maxB3 => maxB3--
+AOIS_13:25:Balde(int,int,int,int,int):volFinalB2 => ++volFinalB2
+AOIS_14:25:Balde(int,int,int,int,int):volFinalB2 => --volFinalB2
+AOIS_15:25:Balde(int,int,int,int,int):volFinalB2 => volFinalB2++
+AOIS_16:25:Balde(int,int,int,int,int):volFinalB2 => volFinalB2--
+AOIS_17:26:Balde(int,int,int,int,int):volFinalB3 => ++volFinalB3
+AOIS_18:26:Balde(int,int,int,int,int):volFinalB3 => --volFinalB3
+AOIS_19:26:Balde(int,int,int,int,int):volFinalB3 => volFinalB3++
+AOIS_20:26:Balde(int,int,int,int,int):volFinalB3 => volFinalB3--
+AOIS_21:32:void_mover(int,int):origem => ++origem
+AOIS_22:32:void_mover(int,int):origem => --origem
+AOIS_23:32:void_mover(int,int):origem => origem++
+AOIS_24:32:void_mover(int,int):origem => origem--
+AOIS_25:32:void_mover(int,int):destino => ++destino
+AOIS_26:32:void_mover(int,int):destino => --destino
+AOIS_27:32:void_mover(int,int):destino => destino++
+AOIS_28:32:void_mover(int,int):destino => destino--
+AOIS_29:35:void_mover(int,int):origem => ++origem
+AOIS_30:35:void_mover(int,int):origem => --origem
+AOIS_31:35:void_mover(int,int):origem => origem++
+AOIS_32:35:void_mover(int,int):origem => origem--
+AOIS_33:35:void_mover(int,int):origem => ++origem
+AOIS_34:35:void_mover(int,int):origem => --origem
+AOIS_35:35:void_mover(int,int):origem => origem++
+AOIS_36:35:void_mover(int,int):origem => origem--
+AOIS_37:35:void_mover(int,int):destino => ++destino
+AOIS_38:35:void_mover(int,int):destino => --destino
+AOIS_39:35:void_mover(int,int):destino => destino++
+AOIS_40:35:void_mover(int,int):destino => destino--
+AOIS_41:35:void_mover(int,int):destino => ++destino
+AOIS_42:35:void_mover(int,int):destino => --destino
+AOIS_43:35:void_mover(int,int):destino => destino++
+AOIS_44:35:void_mover(int,int):destino => destino--
+AOIS_45:38:void_mover(int,int):origem => ++origem
+AOIS_46:38:void_mover(int,int):origem => --origem
+AOIS_47:38:void_mover(int,int):origem => origem++
+AOIS_48:38:void_mover(int,int):origem => origem--
+AOIS_49:41:void_mover(int,int):destino => ++destino
+AOIS_50:41:void_mover(int,int):destino => --destino
+AOIS_51:41:void_mover(int,int):destino => destino++
+AOIS_52:41:void_mover(int,int):destino => destino--
+AOIS_53:41:void_mover(int,int):destino => ++destino
+AOIS_54:41:void_mover(int,int):destino => --destino
+AOIS_55:41:void_mover(int,int):destino => destino++
+AOIS_56:41:void_mover(int,int):destino => destino--
+AOIS_57:44:void_mover(int,int):destino => ++destino
+AOIS_58:44:void_mover(int,int):destino => --destino
+AOIS_59:44:void_mover(int,int):destino => destino++
+AOIS_60:44:void_mover(int,int):destino => destino--
+AOIS_61:44:void_mover(int,int):origem => ++origem
+AOIS_62:44:void_mover(int,int):origem => --origem
+AOIS_63:44:void_mover(int,int):origem => origem++
+AOIS_64:44:void_mover(int,int):origem => origem--
+AOIS_65:44:void_mover(int,int):destino => destino++
+AOIS_66:44:void_mover(int,int):destino => destino--
+AOIS_67:45:void_mover(int,int):origem => ++origem
+AOIS_68:45:void_mover(int,int):origem => --origem
+AOIS_69:45:void_mover(int,int):origem => origem++
+AOIS_70:45:void_mover(int,int):origem => origem--
+AOIS_71:45:void_mover(int,int):destino => ++destino
+AOIS_72:45:void_mover(int,int):destino => --destino
+AOIS_73:45:void_mover(int,int):destino => destino++
+AOIS_74:45:void_mover(int,int):destino => destino--
+AOIS_75:45:void_mover(int,int):destino => ++destino
+AOIS_76:45:void_mover(int,int):destino => --destino
+AOIS_77:45:void_mover(int,int):destino => destino++
+AOIS_78:45:void_mover(int,int):destino => destino--
+AOIS_79:46:void_mover(int,int):destino => ++destino
+AOIS_80:46:void_mover(int,int):destino => --destino
+AOIS_81:46:void_mover(int,int):destino => destino++
+AOIS_82:46:void_mover(int,int):destino => destino--
+AOIS_83:48:void_mover(int,int):destino => ++destino
+AOIS_84:48:void_mover(int,int):destino => --destino
+AOIS_85:48:void_mover(int,int):destino => destino++
+AOIS_86:48:void_mover(int,int):destino => destino--
+AOIS_87:48:void_mover(int,int):origem => ++origem
+AOIS_88:48:void_mover(int,int):origem => --origem
+AOIS_89:48:void_mover(int,int):origem => origem++
+AOIS_90:48:void_mover(int,int):origem => origem--
+AOIS_91:51:void_mover(int,int):volFinalB2 => ++volFinalB2
+AOIS_92:51:void_mover(int,int):volFinalB2 => --volFinalB2
+AOIS_93:51:void_mover(int,int):volFinalB2 => volFinalB2++
+AOIS_94:51:void_mover(int,int):volFinalB2 => volFinalB2--
+AOIS_95:51:void_mover(int,int):volFinalB3 => ++volFinalB3
+AOIS_96:51:void_mover(int,int):volFinalB3 => --volFinalB3
+AOIS_97:51:void_mover(int,int):volFinalB3 => volFinalB3++
+AOIS_98:51:void_mover(int,int):volFinalB3 => volFinalB3--
+ROR_1:32:void_mover(int,int): origem == destino  =>   origem > destino
+ROR_2:32:void_mover(int,int): origem == destino  =>   origem >= destino
+ROR_3:32:void_mover(int,int): origem == destino  =>   origem < destino
+ROR_4:32:void_mover(int,int): origem == destino  =>   origem <= destino
+ROR_5:32:void_mover(int,int): origem == destino  =>   origem != destino
+ROR_6:32:void_mover(int,int): origem == destino  =>   true
+ROR_7:32:void_mover(int,int): origem == destino  =>   false
+ROR_8:35:void_mover(int,int): origem < 0  =>   origem > 0
+ROR_9:35:void_mover(int,int): origem < 0  =>   origem >= 0
+ROR_10:35:void_mover(int,int): origem < 0  =>   origem <= 0
+ROR_11:35:void_mover(int,int): origem < 0  =>   origem == 0
+ROR_12:35:void_mover(int,int): origem < 0  =>   origem != 0
+ROR_13:35:void_mover(int,int): origem < 0  =>   true
+ROR_14:35:void_mover(int,int): origem < 0  =>   false
+ROR_15:35:void_mover(int,int): origem >= 3  =>   origem > 3
+ROR_16:35:void_mover(int,int): origem >= 3  =>   origem < 3
+ROR_17:35:void_mover(int,int): origem >= 3  =>   origem <= 3
+ROR_18:35:void_mover(int,int): origem >= 3  =>   origem == 3
+ROR_19:35:void_mover(int,int): origem >= 3  =>   origem != 3
+ROR_20:35:void_mover(int,int): origem >= 3  =>   true
+ROR_21:35:void_mover(int,int): origem >= 3  =>   false
+ROR_22:35:void_mover(int,int): destino < 0  =>   destino > 0
+ROR_23:35:void_mover(int,int): destino < 0  =>   destino >= 0
+ROR_24:35:void_mover(int,int): destino < 0  =>   destino <= 0
+ROR_25:35:void_mover(int,int): destino < 0  =>   destino == 0
+ROR_26:35:void_mover(int,int): destino < 0  =>   destino != 0
+ROR_27:35:void_mover(int,int): destino < 0  =>   true
+ROR_28:35:void_mover(int,int): destino < 0  =>   false
+ROR_29:35:void_mover(int,int): destino >= 3  =>   destino > 3
+ROR_30:35:void_mover(int,int): destino >= 3  =>   destino < 3
+ROR_31:35:void_mover(int,int): destino >= 3  =>   destino <= 3
+ROR_32:35:void_mover(int,int): destino >= 3  =>   destino == 3
+ROR_33:35:void_mover(int,int): destino >= 3  =>   destino != 3
+ROR_34:35:void_mover(int,int): destino >= 3  =>   true
+ROR_35:35:void_mover(int,int): destino >= 3  =>   false
+ROR_36:38:void_mover(int,int): volume[origem] == 0  =>   volume[origem] > 0
+ROR_37:38:void_mover(int,int): volume[origem] == 0  =>   volume[origem] >= 0
+ROR_38:38:void_mover(int,int): volume[origem] == 0  =>   volume[origem] < 0
+ROR_39:38:void_mover(int,int): volume[origem] == 0  =>   volume[origem] <= 0
+ROR_40:38:void_mover(int,int): volume[origem] == 0  =>   volume[origem] != 0
+ROR_41:38:void_mover(int,int): volume[origem] == 0  =>   true
+ROR_42:38:void_mover(int,int): volume[origem] == 0  =>   false
+ROR_43:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   volume[destino] > maximo[destino]
+ROR_44:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   volume[destino] >= maximo[destino]
+ROR_45:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   volume[destino] < maximo[destino]
+ROR_46:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   volume[destino] <= maximo[destino]
+ROR_47:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   volume[destino] != maximo[destino]
+ROR_48:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   true
+ROR_49:41:void_mover(int,int): volume[destino] == maximo[destino]  =>   false
+ROR_50:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   volume[destino] + volume[origem] >= maximo[destino]
+ROR_51:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   volume[destino] + volume[origem] < maximo[destino]
+ROR_52:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   volume[destino] + volume[origem] <= maximo[destino]
+ROR_53:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   volume[destino] + volume[origem] == maximo[destino]
+ROR_54:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   volume[destino] + volume[origem] != maximo[destino]
+ROR_55:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   true
+ROR_56:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>   false
+ROR_57:51:void_mover(int,int): volume[1] == volFinalB2  =>   volume[1] > volFinalB2
+ROR_58:51:void_mover(int,int): volume[1] == volFinalB2  =>   volume[1] >= volFinalB2
+ROR_59:51:void_mover(int,int): volume[1] == volFinalB2  =>   volume[1] < volFinalB2
+ROR_60:51:void_mover(int,int): volume[1] == volFinalB2  =>   volume[1] <= volFinalB2
+ROR_61:51:void_mover(int,int): volume[1] == volFinalB2  =>   volume[1] != volFinalB2
+ROR_62:51:void_mover(int,int): volume[1] == volFinalB2  =>   true
+ROR_63:51:void_mover(int,int): volume[1] == volFinalB2  =>   false
+ROR_64:51:void_mover(int,int): volume[2] == volFinalB3  =>   volume[2] > volFinalB3
+ROR_65:51:void_mover(int,int): volume[2] == volFinalB3  =>   volume[2] >= volFinalB3
+ROR_66:51:void_mover(int,int): volume[2] == volFinalB3  =>   volume[2] < volFinalB3
+ROR_67:51:void_mover(int,int): volume[2] == volFinalB3  =>   volume[2] <= volFinalB3
+ROR_68:51:void_mover(int,int): volume[2] == volFinalB3  =>   volume[2] != volFinalB3
+ROR_69:51:void_mover(int,int): volume[2] == volFinalB3  =>   true
+ROR_70:51:void_mover(int,int): volume[2] == volFinalB3  =>   false
+COR_1:35:void_mover(int,int): origem < 0 || origem >= 3  =>   origem < 0 && origem >= 3
+COR_2:35:void_mover(int,int): origem < 0 || origem >= 3  =>   origem < 0 ^ origem >= 3
+COR_3:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0  =>   (origem < 0 || origem >= 3) && destino < 0
+COR_4:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0  =>   (origem < 0 || origem >= 3) ^ destino < 0
+COR_5:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0 || destino >= 3  =>   (origem < 0 || origem >= 3 || destino < 0) && destino >= 3
+COR_6:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0 || destino >= 3  =>   (origem < 0 || origem >= 3 || destino < 0) ^ destino >= 3
+COR_7:51:void_mover(int,int): volume[1] == volFinalB2 && volume[2] == volFinalB3  =>   volume[1] == volFinalB2 || volume[2] == volFinalB3
+COR_8:51:void_mover(int,int): volume[1] == volFinalB2 && volume[2] == volFinalB3  =>   volume[1] == volFinalB2 ^ volume[2] == volFinalB3
+COI_1:32:void_mover(int,int): origem == destino  =>  !(origem == destino)
+COI_2:35:void_mover(int,int): origem < 0  =>  !(origem < 0)
+COI_3:35:void_mover(int,int): origem >= 3  =>  !(origem >= 3)
+COI_4:35:void_mover(int,int): origem < 0 || origem >= 3  =>  !(origem < 0 || origem >= 3)
+COI_5:35:void_mover(int,int): destino < 0  =>  !(destino < 0)
+COI_6:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0  =>  !(origem < 0 || origem >= 3 || destino < 0)
+COI_7:35:void_mover(int,int): destino >= 3  =>  !(destino >= 3)
+COI_8:35:void_mover(int,int): origem < 0 || origem >= 3 || destino < 0 || destino >= 3  =>  !(origem < 0 || origem >= 3 || destino < 0 || destino >= 3)
+COI_9:38:void_mover(int,int): volume[origem] == 0  =>  !(volume[origem] == 0)
+COI_10:41:void_mover(int,int): volume[destino] == maximo[destino]  =>  !(volume[destino] == maximo[destino])
+COI_11:44:void_mover(int,int): volume[destino] + volume[origem] > maximo[destino]  =>  !(volume[destino] + volume[origem] > maximo[destino])
+COI_12:51:void_mover(int,int): volume[1] == volFinalB2  =>  !(volume[1] == volFinalB2)
+COI_13:51:void_mover(int,int): volume[2] == volFinalB3  =>  !(volume[2] == volFinalB3)
+COI_14:51:void_mover(int,int): volume[1] == volFinalB2 && volume[2] == volFinalB3  =>  !(volume[1] == volFinalB2 && volume[2] == volFinalB3)
+LOI_1:18:Balde(int,int,int,int,int):maxB1 => ~maxB1
+LOI_2:19:Balde(int,int,int,int,int):maxB2 => ~maxB2
+LOI_3:20:Balde(int,int,int,int,int):maxB3 => ~maxB3
+LOI_4:25:Balde(int,int,int,int,int):volFinalB2 => ~volFinalB2
+LOI_5:26:Balde(int,int,int,int,int):volFinalB3 => ~volFinalB3
+LOI_6:32:void_mover(int,int):origem => ~origem
+LOI_7:32:void_mover(int,int):destino => ~destino
+LOI_8:35:void_mover(int,int):origem => ~origem
+LOI_9:35:void_mover(int,int):origem => ~origem
+LOI_10:35:void_mover(int,int):destino => ~destino
+LOI_11:35:void_mover(int,int):destino => ~destino
+LOI_12:38:void_mover(int,int):origem => ~origem
+LOI_13:41:void_mover(int,int):destino => ~destino
+LOI_14:41:void_mover(int,int):destino => ~destino
+LOI_15:44:void_mover(int,int):destino => ~destino
+LOI_16:44:void_mover(int,int):origem => ~origem
+LOI_17:44:void_mover(int,int):destino => ~destino
+LOI_18:45:void_mover(int,int):origem => ~origem
+LOI_19:45:void_mover(int,int):origem => ~origem
+LOI_20:45:void_mover(int,int):destino => ~destino
+LOI_21:45:void_mover(int,int):destino => ~destino
+LOI_22:46:void_mover(int,int):destino => ~destino
+LOI_23:46:void_mover(int,int):destino => ~destino
+LOI_24:48:void_mover(int,int):destino => ~destino
+LOI_25:48:void_mover(int,int):destino => ~destino
+LOI_26:48:void_mover(int,int):origem => ~origem
+LOI_27:49:void_mover(int,int):origem => ~origem
+LOI_28:51:void_mover(int,int):volFinalB2 => ~volFinalB2
+LOI_29:51:void_mover(int,int):volFinalB3 => ~volFinalB3

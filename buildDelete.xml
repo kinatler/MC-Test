@@ -1,0 +1,34 @@
+<project name="Example" xmlns:jacoco="antlib:org.jacoco.ant" default="rebuild">
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<description>
+		Script para analisar cobertura de uma classe de teste.
+	</description>	
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<property name="src.dir" location="./teste"/>
+	<property name="bin.dir" location="./binteste"/>
+	<property name="report.dir" location="./report"/>
+	<property name="allJava.dir" location="./AllJava"/>
+	<property name="temp.dir" location="./temp"/>
+	<property name="classes.dir" location="./classes"/>
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<target name="clean">
+		<delete dir="${report.dir}"/>	
+		<mkdir dir="${report.dir}"/>
+		<delete dir="${allJava.dir}"/>	
+		<mkdir dir="${allJava.dir}"/>
+		<delete dir="${temp.dir}"/>	
+		<mkdir dir="${temp.dir}"/>
+		<mkdir dir="${temp.dir}/classes"/>
+		<mkdir dir="${temp.dir}/test"/>
+	</target>
+	
+
+	
+	<target name="rebuild" depends="clean"/>
+</project>

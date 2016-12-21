@@ -1,0 +1,26 @@
+<project name="Example" xmlns:jacoco="antlib:org.jacoco.ant" default="rebuild">
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<description>
+		Script para analisar cobertura de uma classe de teste.
+	</description>	
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<property name="from.dir" location="./AllJava/"/>
+	<property name="to.dir" location="./MuJavaInstrumentation/session1/testset"/>
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	
+	<target name="copy">
+			<copy todir="${to.dir}" flatten="true">
+				    <fileset dir="${from.dir}">
+				        <include name="**/TesteBaldeCobertura.class"/>
+				    </fileset>
+				</copy>
+		</target>
+	
+	<target name="rebuild" depends="copy"/>
+</project>

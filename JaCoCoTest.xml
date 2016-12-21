@@ -1,0 +1,78 @@
+<project name="Example" xmlns:jacoco="antlib:org.jacoco.ant" default="rebuild">
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<description>
+		Script para analisar cobertura de uma classe de teste.
+	</description>	
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<property name="src.dir" location="./teste"/>
+	<property name="bin.dir" location="./binteste"/>
+	<property name="report.dir" location="./report"/>
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<target name="clean">
+		<delete dir="${bin.dir}"/>	
+		<mkdir dir="${bin.dir}"/>
+		<delete dir="${report.dir}"/>
+		<mkdir dir="${report.dir}"/>
+		<delete file="jacoco.exec"/>
+	</target>
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<target name="compile" depends="clean">
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" debug="true" includeantruntime="false"
+			classpath="./lib/junit.jar"/>
+	</target>
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+    <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+        <classpath path="./lib/jacocoant.jar"/>
+    </taskdef>
+
+	<path id="classpath.test">
+		<pathelement location="./lib/junit.jar"/>
+	</path>		
+	
+	<target name="test" depends="compile">
+		<jacoco:coverage>
+			<junit printsummary="on" haltonfailure="no" fork="true" forkmode="once">
+				<classpath>
+					<pathelement location="./lib/junit.jar"/>
+					<pathelement location="./lib/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+					<pathelement location="${bin.dir}"/>
+				</classpath>
+				<test name="TesteBaldeCobertura"/>
+				<formatter type="plain" usefile="false"/>
+			</junit>
+		</jacoco:coverage>
+	</target>
+		
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<target name="report" depends="test">
+		<jacoco:report>
+		    <executiondata>
+		        <file file="jacoco.exec"/>
+		    </executiondata>	                        
+		    <structure name="Example Project">
+		        <classfiles>
+		            <fileset dir="${bin.dir}"/>
+		        </classfiles>
+		        <sourcefiles encoding="UTF-8">
+		            <fileset dir="${src.dir}"/>
+		        </sourcefiles>
+		    </structure>	                        
+		    <html destdir="${report.dir}"/>
+			<csv destfile="${report.dir}/report.csv"/>
+			<xml destfile="${report.dir}/report.xml"/>
+		</jacoco:report>
+	</target>
+	
+	<target name="rebuild" depends="clean,compile,test,report"/>
+</project>

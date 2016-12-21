@@ -1,0 +1,5 @@
+Balde(int,int,int,int,int)
+void_mover(int,int)
+int_getVolume()
+void_imprimirVolume(int)
+void_main(java.lang.String[])

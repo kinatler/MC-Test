@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Example Project,default,Balde,270,0,20,0,51,0,15,0,5,0
+Example Project,default,TesteBaldeCobertura,186,0,0,0,70,0,11,0,11,0
+Example Project,simplejavacalculator,Calculator.BiOperatorModes,68,0,0,0,2,0,4,0,4,0
+Example Project,simplejavacalculator,SimpleJavaCalculatorTest,6,0,0,0,3,0,2,0,2,0
+Example Project,simplejavacalculator,SimpleJavaCalculator,10,0,0,0,4,0,2,0,2,0
+Example Project,simplejavacalculator,UI,529,0,34,0,102,0,22,0,5,0
+Example Project,simplejavacalculator,Calculator,173,0,24,0,40,0,18,0,6,0
+Example Project,simplejavacalculator,Calculator.MonoOperatorModes,78,0,0,0,2,0,4,0,4,0
+Example Project,simplejavacalculator,CalculatorTest,711,0,2,0,144,0,15,0,14,0
+Example Project,simplejavacalculator,UITest,930,0,0,0,191,0,8,0,8,0

@@ -1,0 +1,35 @@
+<project name="Example" xmlns:jacoco="antlib:org.jacoco.ant" default="rebuild">
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<description>
+		Script para analisar cobertura de uma classe de teste.
+	</description>	
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<property name="mujava.dir" location="./lib/MuScript/"/>
+	<property name="mujavaInstrumentation.dir" location="./MuJavaInstrumentation"/>
+
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<target name="clean">
+			<delete file="./lib/MuScript/mujavaCLI.config"/>	
+			<delete file="./lib/MuScript/mujava.config"/>	
+			<delete dir="${mujavaInstrumentation.dir}"/>	
+			<mkdir dir="${mujavaInstrumentation.dir}"/>
+		</target>
+	<target name="copy" depends="clean">
+		<copy tofile="./lib/MuScript/mujavaCLI.config" flatten="true">
+					    <fileset file="./lib/MuScript/mujavaCLIOriginal.config">
+					    </fileset>
+					</copy>
+		<copy tofile="./lib/MuScript/mujava.config" flatten="true">
+							    <fileset file="./lib/MuScript/mujavaOriginal.config">
+							    </fileset>
+					</copy>
+	</target>
+	
+	<target name="rebuild" depends="copy"/>
+</project>

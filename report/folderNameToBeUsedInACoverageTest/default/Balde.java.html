@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Balde.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Example Project</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Balde.java</span></div><h1>Balde.java</h1><pre class="source lang-java linenums">
+public class Balde {
+	
+	private int maximo[];
+	private int volume[];
+	private int volFinalB2, volFinalB3;
+	
+<span class="nc" id="L8">	public Balde(int maxB1, int maxB2, int maxB3, int volFinalB2, int volFinalB3) {</span>
+<span class="nc" id="L9">		this.maximo = new int[3];		</span>
+<span class="nc" id="L10">		this.maximo[0] = maxB1;</span>
+<span class="nc" id="L11">		this.maximo[1] = maxB2;</span>
+<span class="nc" id="L12">		this.maximo[2] = maxB3;</span>
+		
+<span class="nc" id="L14">		this.volume = new int[3];</span>
+<span class="nc" id="L15">		this.volume[0] = 0;</span>
+<span class="nc" id="L16">		this.volume[1] = 0;</span>
+<span class="nc" id="L17">		this.volume[2] = maximo[2];</span>
+		
+<span class="nc" id="L19">		this.volFinalB2 = volFinalB2;</span>
+<span class="nc" id="L20">		this.volFinalB3 = volFinalB3;</span>
+<span class="nc" id="L21">	}</span>
+	
+	public void mover(int origem, int destino) throws Exception {
+<span class="nc bnc" id="L24" title="All 2 branches missed.">		if (origem == destino) {</span>
+<span class="nc" id="L25">			throw new Exception(&quot;Origem precisa ser diferente de destino!&quot;);</span>
+		} else {
+<span class="nc bnc" id="L27" title="All 8 branches missed.">			if (origem &lt; 0 || origem &gt;= 3 || destino &lt; 0 || destino &gt;= 3) {</span>
+<span class="nc" id="L28">				throw new Exception(&quot;Origem e destino precisam estar entre 0..2!&quot;);</span>
+			} else {
+<span class="nc bnc" id="L30" title="All 2 branches missed.">				if (volume[origem] == 0) {</span>
+<span class="nc" id="L31">					throw new Exception(&quot;O balde origem está vazio!&quot;);</span>
+				} else {
+<span class="nc bnc" id="L33" title="All 2 branches missed.">					if (volume[destino] == maximo[destino]) {</span>
+<span class="nc" id="L34">						throw new Exception(&quot;O destino já está cheio!&quot;);</span>
+					} else {
+<span class="nc bnc" id="L36" title="All 2 branches missed.">						if (volume[destino] + volume[origem] &gt; maximo[destino]) {</span>
+<span class="nc" id="L37">							volume[origem] = volume[origem] - (maximo[destino] - volume[destino]);</span>
+<span class="nc" id="L38">							volume[destino] = maximo[destino];</span>
+						} else {
+<span class="nc" id="L40">							volume[destino] = volume[destino] + volume[origem];						</span>
+<span class="nc" id="L41">							volume[origem] = 0;</span>
+						}
+						
+<span class="nc bnc" id="L44" title="All 4 branches missed.">						if (volume[1] == volFinalB2 &amp;&amp; volume[2] == volFinalB3) {</span>
+<span class="nc" id="L45">							System.out.println(&quot;Problema resolvido!&quot;);</span>
+						}
+					}
+				}
+			}
+		}
+<span class="nc" id="L51">	}</span>
+
+	public int[] getVolume() {
+<span class="nc" id="L54">		return volume;</span>
+	}
+	
+	public static void imprimirVolume(int[] volume) {
+<span class="nc" id="L58">		System.out.println(&quot;[&quot; + volume[0] + &quot; &quot; + volume[1] + &quot; &quot; + volume[2] + &quot;]&quot;);</span>
+<span class="nc" id="L59">	}</span>
+	
+	public static void main(String[] args) {
+<span class="nc" id="L62">		Balde b = new Balde(3, 5, 8, 4, 4);	</span>
+<span class="nc" id="L63">		Balde.imprimirVolume(b.getVolume());</span>
+		
+		try {
+<span class="nc" id="L66">			b.mover(2,1);</span>
+<span class="nc" id="L67">			Balde.imprimirVolume(b.getVolume());</span>
+
+<span class="nc" id="L69">			b.mover(1,0);</span>
+<span class="nc" id="L70">			Balde.imprimirVolume(b.getVolume());</span>
+
+<span class="nc" id="L72">			b.mover(0,2);</span>
+<span class="nc" id="L73">			Balde.imprimirVolume(b.getVolume());</span>
+			
+<span class="nc" id="L75">			b.mover(1,0);</span>
+<span class="nc" id="L76">			Balde.imprimirVolume(b.getVolume());		</span>
+
+<span class="nc" id="L78">			b.mover(2,1);</span>
+<span class="nc" id="L79">			Balde.imprimirVolume(b.getVolume());</span>
+			
+<span class="nc" id="L81">			b.mover(1,0);</span>
+<span class="nc" id="L82">			Balde.imprimirVolume(b.getVolume());</span>
+			
+<span class="nc" id="L84">			b.mover(0,2);</span>
+<span class="nc" id="L85">			Balde.imprimirVolume(b.getVolume());			</span>
+<span class="nc" id="L86">		} catch (Exception e) {</span>
+			// TODO Auto-generated catch block
+<span class="nc" id="L88">			e.printStackTrace();</span>
+<span class="nc" id="L89">		}		</span>
+<span class="nc" id="L90">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.8.201609260621</span></div></body></html>

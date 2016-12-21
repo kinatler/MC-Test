@@ -1,0 +1,28 @@
+<project name="Example" xmlns:jacoco="antlib:org.jacoco.ant" default="rebuild">
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<description>
+		Script para analisar cobertura de uma classe de teste.
+	</description>	
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
+	
+	<property name="src.dir" location="./MuJavaInstrumentation/session1/src"/>
+	<property name="bin.dir" location="./MuJavaInstrumentation/session1/classes"/>
+	<property name="testsrc.dir" location="./temp/test/"/>
+	<property name="testbin.dir" location="./MuJavaInstrumentation/session1/testset"/>
+	<property name="Allbin.dir" location="./AllJava"/>
+
+
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<target name="compile">
+			<javac srcdir="${src.dir}" destdir="${bin.dir}" debug="true" includeantruntime="false"
+				classpath="./lib/junit.jar"/>
+			<javac srcdir="${Allbin.dir}" destdir="${Allbin.dir}" debug="true" includeantruntime="false"
+				classpath="./lib/junit.jar"/>
+		</target>
+	
+	<target name="rebuild" depends="compile"/>
+</project>
